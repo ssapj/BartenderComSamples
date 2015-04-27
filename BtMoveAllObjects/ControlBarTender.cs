@@ -26,7 +26,7 @@ namespace BtMoveAllObjects
 
         ~ControlBarTender()
         {
-            Dispose(false);
+            this.Dispose(false);
         }
 
 
@@ -94,7 +94,7 @@ namespace BtMoveAllObjects
             {
                 Console.WriteLine("Restart BarTender");
                 Marshal.FinalReleaseComObject(this._btApp);
-                StartBartender();
+                this.StartBartender();
             }
 
             var btFormat = this._btApp.Formats.Open(btwfilepath);
@@ -121,7 +121,7 @@ namespace BtMoveAllObjects
 
         public void Dispose()
         {
-            Dispose(true);
+            this.Dispose(true);
             GC.SuppressFinalize(this);
         }
 
